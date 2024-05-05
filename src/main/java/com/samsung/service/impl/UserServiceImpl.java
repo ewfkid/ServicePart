@@ -41,6 +41,4 @@ public class UserServiceImpl implements UserService {
                 "user  with id " + id + " was not found"));
     }
 
-
-
 }
