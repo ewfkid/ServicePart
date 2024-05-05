@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Entity
 @Builder
@@ -23,15 +21,9 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "nick_name")
-    private String nickName;
-
     @Column(name = "email", unique = true)
     private String email;
 
     @Column(name = "password")
     private String password;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "points")
-    private List<Point> points;
 }

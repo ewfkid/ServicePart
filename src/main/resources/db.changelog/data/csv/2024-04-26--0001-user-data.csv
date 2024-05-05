@@ -1,4 +1,4 @@
-name;nick_name;email;password
-John;John123;email1;password1
-Sara;Sara234;email2;password2
-Bob;Bob678;email3;password3
+name;email;password
+John;email1;password1
+Sara;email2;password2
+Bob;email3;password3
