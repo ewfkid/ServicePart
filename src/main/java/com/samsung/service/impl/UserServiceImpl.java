@@ -35,6 +35,12 @@ public class UserServiceImpl implements UserService {
                 "user  with email " + email + " was not found"));
     }
 
+    @Override
+    public User getById(long id) {
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(
+                "user  with id " + id + " was not found"));
+    }
+
 
 
 }
