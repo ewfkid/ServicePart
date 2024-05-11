@@ -1,4 +1,4 @@
-name;latitude;longitude;user_id
-point1;10.51601;42.80490;1
-point2;-37.85124;-27.31729;2
-point3;39.17418;-9.46132;3
+name;latitude;longitude;address;photo_url;user_id
+point1;10.51601;42.80490;address1;photo1;1
+point2;-37.85124;-27.31729;address2;photo2;2
+point3;39.17418;-9.46132;address3;photo3;3

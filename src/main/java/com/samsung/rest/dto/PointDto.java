@@ -22,6 +22,10 @@ public class PointDto {
 
     private double longitude;
 
+    private String address;
+
+    private String photoUrl;
+
     private UserDto userDto;
 
     public static PointDto toDto(Point point) {
@@ -30,6 +34,8 @@ public class PointDto {
                 point.getName(),
                 point.getLatitude(),
                 point.getLongitude(),
+                point.getAddress(),
+                point.getPhotoUrl(),
                 UserDto.toDto(point.getUser())
         );
     }
@@ -40,6 +46,8 @@ public class PointDto {
                 pointDto.getName(),
                 pointDto.getLatitude(),
                 pointDto.getLongitude(),
+                pointDto.getAddress(),
+                pointDto.getPhotoUrl(),
                 UserDto.fromDto(pointDto.getUserDto())
         );
     }

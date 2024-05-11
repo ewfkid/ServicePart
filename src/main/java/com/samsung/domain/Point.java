@@ -27,6 +27,12 @@ public class Point {
     @Column(name = "longitude")
     private double longitude;
 
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "photo_url")
+    private String photoUrl;
+
     @ManyToOne(targetEntity = User.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
