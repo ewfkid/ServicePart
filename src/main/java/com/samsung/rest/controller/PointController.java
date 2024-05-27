@@ -3,7 +3,6 @@ package com.samsung.rest.controller;
 import com.samsung.domain.Point;
 import com.samsung.rest.dto.PointDto;
 import com.samsung.service.PointService;
-import com.samsung.service.UserService;
 import lombok.RequiredArgsConstructor;
 import com.samsung.mapper.PointMapper;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +15,6 @@ import java.util.stream.Collectors;
 public class PointController {
 
     private final PointService pointService;
-
-    private final UserService userService;
 
     @PostMapping("/point")
     public PointDto savePoint(@RequestBody PointDto pointDto) {
