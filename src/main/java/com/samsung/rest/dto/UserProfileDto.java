@@ -2,24 +2,23 @@ package com.samsung.rest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Getter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PointDto {
+
+public class UserProfileDto {
 
     private long id;
 
     private String name;
 
-    private double latitude;
+    private String email;
 
-    private double longitude;
-
-    private String address;
-
-    private UserProfileDto userDto;
+    private String photoUrl;
 }
+
+

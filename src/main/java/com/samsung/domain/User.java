@@ -32,6 +32,9 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "photo_url")
+    private String photoUrl;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of();
