@@ -2,8 +2,6 @@ package com.samsung.mapper;
 
 import com.samsung.domain.Point;
 import com.samsung.rest.dto.PointDto;
-import com.samsung.rest.dto.UserProfileDto;
-import com.samsung.rest.dto.UserRegisterDto;
 
 public class PointMapper {
 
