@@ -1,10 +1,10 @@
 package com.samsung.service.impl;
 
 import com.samsung.dao.UserRepository;
+import com.samsung.exeption.PointAlreadyExistsException;
 import com.samsung.exeption.PointNotFoundException;
 import com.samsung.dao.PointRepository;
 import com.samsung.domain.Point;
-import com.samsung.exeption.UserAlreadyExistsException;
 import com.samsung.exeption.UserNotFoundException;
 import com.samsung.service.PointService;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,7 +34,7 @@ public class PointServiceImpl implements PointService {
     @Transactional
     public Point save(Point point) {
         if (pointRepository.findByLatitudeAndLongitude(point.getLatitude(), point.getLongitude()).isPresent())
-            throw new UserAlreadyExistsException(
+            throw new PointAlreadyExistsException(
                     "point  with coordinates: latitude " + point.getLatitude()
                             + " longitude " + point.getLongitude() + " already exists");
         return pointRepository.save(point);
