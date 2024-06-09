@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 
@@ -43,7 +45,7 @@ public class UserServiceImpl implements UserService {
         if (user.getName() != null) user.setName(user.getName());
         if (user.getEmail() != null) user.setEmail(user.getEmail());
         if (user.getPhotoUrl() != null) user.setPhotoUrl(user.getPhotoUrl());
-        return null;
+        return userRepository.save(user);
     }
 
     @Override
@@ -51,5 +53,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(
                 "user  with id " + id + " was not found"));
     }
+
 
 }
