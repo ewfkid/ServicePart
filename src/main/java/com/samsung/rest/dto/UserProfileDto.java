@@ -14,9 +14,9 @@ public class UserProfileDto {
 
     private long id;
 
-    private String name;
-
     private String email;
+
+    private String name;
 
     private String photoUrl;
 }

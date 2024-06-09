@@ -53,4 +53,9 @@ public class PointController {
                 .map(PointMapper::toDto)
                 .collect(Collectors.toList());
     }
+
+    @GetMapping("/point/{name}")
+    public PointDto findPointByName(@PathVariable String name){
+        return  PointMapper.toDto(pointService.findByName(name));
+    }
 }
