@@ -14,4 +14,5 @@ public interface PointRepository extends JpaRepository<Point, Long> {
 
     List<Point> findByUserId(long id);
 
+    Optional<Point> findByName(String name);
 }

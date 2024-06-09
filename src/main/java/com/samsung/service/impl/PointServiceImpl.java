@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -76,5 +77,12 @@ public class PointServiceImpl implements PointService {
             throw new UserNotFoundException("user with id " + userId + " was not found");
         }
         return pointRepository.findByUserId(userId);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Point findByName(String name) {
+        return pointRepository.findByName(name).orElseThrow(()
+                -> new PointNotFoundException("point with name " + name + "was not found"));
     }
 }

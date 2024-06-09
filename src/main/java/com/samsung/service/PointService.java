@@ -18,4 +18,6 @@ public interface PointService {
     void deleteById(long id);
 
     List<Point> findByUserId(long userId);
+
+    Point findByName(String name);
 }
